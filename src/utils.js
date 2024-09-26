@@ -1,5 +1,5 @@
 export function postProfile(profile) {
-    console.log(profile);
+    console.log(new Date(Date.now()).toString());
     return fetch(
       "https://keeperinsightsdemo.uc.r.appspot.com/profiles/fastprofilefloat",
       {

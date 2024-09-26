@@ -39,7 +39,7 @@ function App() {
       url: 'https://media2.giphy.com/media/iicDrNGWxHmDrIni6j/giphy-downsized-medium.gif?cid=c90613e0aujl964osi8gysotsgf48rlotebkqxzn9e1mvk1p&ep=v1_gifs_search&rid=giphy-downsized-medium.gif&ct=g',
     },
     // company: "Company",
-    birthday: new Date(Date.now()).toString(),
+    birthday: 'happy birthday!',
     location: 'here',
     job_title: 'blank',
     team: 'blank',
