@@ -4,7 +4,6 @@ export function postProfile(profile) {
       "https://keeperinsightsdemo.uc.r.appspot.com/profiles/fastprofilefloat",
       {
         method: "POST",
-  
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(profile),
       },

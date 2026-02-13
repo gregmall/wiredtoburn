@@ -2,7 +2,7 @@
 
 import './App.css';
 import { useEffect } from 'react';
-import { postProfile } from './utils';
+
 
 
 
@@ -48,17 +48,7 @@ function App() {
   };
   
   useEffect(() => {
-    let profilePingInterval
-    try{
-      postProfile(pingEngine)
-      profilePingInterval = setInterval(async()=>await postProfile(pingEngine), 1000*5*60)
-     
-    }
-    catch (error){
-      console.log(error.message, 'error')
-    }
-   ;
-   return ()=>clearInterval(profilePingInterval)
+    console.log(pingEngine)
   }, [pingEngine]);
 
  
