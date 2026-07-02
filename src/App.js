@@ -16,9 +16,8 @@ function App() {
     <div className="App">
       <header className="App-header">
        <img src="/assets/logo.png" alt="bitchass"></img>
+       </header>
        
-       
-      </header>
     </div>
   );
 }
