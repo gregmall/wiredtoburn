@@ -11,6 +11,7 @@
 # production
 /build
 /.next
+/out
 next-env.d.ts
 
 # misc
