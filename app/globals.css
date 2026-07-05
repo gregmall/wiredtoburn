@@ -41,7 +41,7 @@ code {
   font-family: 'Rowdies', cursive;
   font-size: 2.2em;
   text-shadow: 3px 3px black;
-  background-image: url(/title.webp);
+
   background-size: cover;
   color: transparent;
   -moz-background-clip: text;
