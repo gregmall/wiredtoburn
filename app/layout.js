@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Let it burn',
   manifest: '/manifest.json',
   icons: {
-    icon: '/fire.png',
+    icon: '/logoicon.png',
     apple: '/logo192.png',
   },
 };

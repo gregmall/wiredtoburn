@@ -7,7 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/complex-wiring-1.jpg");
+   background-image: url("/assets/wired_to_burn_v1_no_text.png");
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
