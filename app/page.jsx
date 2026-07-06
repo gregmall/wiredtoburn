@@ -2,13 +2,14 @@ export default function Home() {
   return (
     <div className="App">
 
-      <header className="fixed top-0 w-full left-0">
+      <header className="sticky top-0">
         <img 
-          src="/assets/wired.gif" 
+          src="/assets/wired.gif"
+         
           style={{maxWidth: '80vw'}} />
 
       </header>
-      <div className="flex">
+      <div className="flex justify-between">
         {/* <img src="/circle1.jpg" style={{borderRadius: "50%", width: "30vw"}} /> */}
         <img src="/circle2.jpg" style={{borderRadius: "50%", width: "30vw", margin: "10px"}} />
         <img src="/circle3.jpg" style={{borderRadius: "50%", width: "30vw", margin: "10px"}} />
