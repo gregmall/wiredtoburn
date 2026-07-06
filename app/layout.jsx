@@ -17,10 +17,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="ZSwLCovjiW_aaTKiw5IiqCRLEE76HMrHyD5Os4CMSac" />
-      </head>
-      <body>{children}</body>
+       <body>{children}</body>
     </html>
   );
 }
