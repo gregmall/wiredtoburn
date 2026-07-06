@@ -13,10 +13,10 @@ export default function Home() {
            />
 
       </header>
-      <aside className="bg-black text-white p-4">
+      <aside className="text-white p-4">
         <h1 className="text-4xl font-bold mb-4">We are a band</h1>
         <p className="text-lg">
-          We play music. We like the cars.  The cars that go boom. 
+          We play music. We recorded some of it. We will post it here. 
         </p>
       </aside>
       <main className="p-4">
