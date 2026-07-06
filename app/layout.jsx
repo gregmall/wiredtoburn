@@ -1,11 +1,11 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Is This To Code?',
-  description: 'Let it burn',
+  title: 'Not much is ok, actually',
+  description: 'Band. From Portland, Oregon.',
   manifest: '/manifest.json',
   icons: {
-    icon: '/logoicon.png',
+    icon: '/iconUs.png',
     apple: '/iconUs.png',
   },
 };
