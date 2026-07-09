@@ -41,7 +41,7 @@ export default function Home() {
         <div style={{flexDirection: "column", color: "white", marginTop: "20px"}}>
           <section id="about">THIS IS THE ABOUT SECTION</section>
           <section id="music"><h1>Music Is Coming Soon</h1></section>
-          <section id="shows">THIS IS THE SHOWS SECTION</section>
+          <section id="shows">THIS IS THE SHOWS SECTION!</section>
         </div>
         
        
