@@ -1,11 +1,11 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Not much is ok, actually',
+  title: 'New Album Out Now!',
   description: 'Band. From Portland, Oregon.',
   manifest: '/manifest.json',
   icons: {
-    icon: '/iconUs.png',
+    icon: '/pulse_icon.ico',
     apple: '/iconUs.png',
   },
 };
