@@ -6,7 +6,7 @@ export const metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: '/pulse_icon.ico',
-    apple: '/iconUs.png',
+    apple: '/pulse_icon.ico',
   },
 };
 
