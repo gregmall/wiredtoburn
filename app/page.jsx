@@ -1,8 +1,11 @@
 'use client'
 
 import React from 'react';
+import { useRef } from 'react';
 
 export default function Home() {
+
+  const naveRef = useRef(null);
   return (
     <div className="App text-color-white min-h-screen">
 
@@ -36,7 +39,7 @@ export default function Home() {
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
         <div className="flex flex-col text-white mt-5">
-          <section id="about" className="my-16 sm:my-24 md:my-40">THIS IS THE ABOUT SECTION</section>
+          <section  ref={naveRef} id="about" className="my-16 sm:my-24 md:my-40">THIS IS THE ABOUT SECTION</section>
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
