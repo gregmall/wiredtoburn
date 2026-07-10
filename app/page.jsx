@@ -3,13 +3,9 @@
 import React from 'react';
 import { useRef, useState } from 'react';
 import playListData from '../playList.json';
-import  AudioPlayer,{
-        useAudioPlayer,
-        ActiveUI,
-        ProgressUI
-        }from "react-modern-audio-player";
+import  AudioPlayer,{ ActiveUI }from "react-modern-audio-player";
 import "react-modern-audio-player/dist/index.css";
-
+import { Link, Element } from "react-scroll";
 import { Button } from "@material-tailwind/react";
 
 const { playList } = playListData;
@@ -28,10 +24,10 @@ export default function Home() {
             src="/assets/newWired.gif"
             className="w-[70vw] h-auto mt-2 sm:mt-5 max-h-[100px] sm:max-h-[150px] max-w-[825px]"
             />
-          <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-4 text-white">
-            <a href="#about" className="text-white hover:text-gray-400">About</a>
-            <a href="#music" className="text-white hover:text-gray-400">Music</a>
-            <a href="#shows" className="text-white hover:text-gray-400">Shows</a>
+          <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-6 text-white">
+            <Link to="about" smooth={true} duration={700}className="text-white hover:text-gray-400">About</Link>
+            <Link to="music" smooth={true} duration={700}className="text-white hover:text-gray-400">Music</Link>
+            <Link to="shows" smooth={true} duration={700}className="text-white hover:text-gray-400">Shows</Link>
             <a href="/contact" className="text-white hover:text-gray-400">Contact</a>
             <a href="https://www.facebook.com/wiredtoburn" target="_blank" rel="noopener noreferrer" className="text-white"><img src="/assets/facebook.png" /></a>
             <a href="https://www.instagram.com/wired_to_burn" target="_blank" rel="noopener noreferrer" className="text-white"><img src="/assets/instagram.png" /></a>
@@ -52,13 +48,13 @@ export default function Home() {
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
         <div className="flex flex-col text-white mt-5">
-          <section  ref={naveRef} id="about" className="my-16 sm:my-24 md:my-40"> <h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE ABOUT SECTION</h1></section>
+          <Element name="about" className="my-16 sm:my-24 md:my-40"> <h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE ABOUT SECTION</h1></Element>
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle6.jpg?alt=media&token=76acd7d2-e4df-4c0b-bd02-a2fb72978cba" className="rounded-full w-full h-auto object-cover" />
           </div>
-          <section id="music" className="my-16 sm:my-24 md:my-40">
+          <Element name="music" className="my-16 sm:my-24 md:my-40">
             <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1>
             <div className="w-full max-w-md mx-auto">
               <AudioPlayer
@@ -88,13 +84,13 @@ export default function Home() {
                 rootContainerProps={{ className: "w-full" }}
                 />
             </div>
-          </section>
+          </Element>
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle8.jpg?alt=media&token=b724cc9a-f174-4404-9125-98737d4e55fb" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcirlce10.jpg?alt=media&token=0282e209-936a-4190-bfab-cbb409cecc6c" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
           </div>
-          <section id="shows" className="mt-12 sm:mt-20"><h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE SHOWS SECTION!</h1></section>
+          <Element name="shows" className="mt-12 sm:mt-20"><h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE SHOWS SECTION!</h1></Element>
         </div>
       </main>
       
