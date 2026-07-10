@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { db } from '../../src/config/Config';
 import { useRouter } from 'next/navigation';
 import { sendEmail } from '../api/route';
-
+import Notiflix from 'notiflix';
 import {
     Card,
     Input,
@@ -40,7 +40,7 @@ const Contact = () => {
 
         try {
             await db.collection('formSubmission').add({ name, content, email, date: Date.now() });
-            alert('Form Submitted! We will get back to you ASAP');
+            Notiflix.Notify.success('Thanks for reaching out! We will get back to you as soon as possible.');
             router.push('/');
         } catch (error) {
             console.error(error.message);

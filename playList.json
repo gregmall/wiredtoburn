@@ -3,49 +3,49 @@
           {
     "name": "Karmic Clean",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FKarmic%20Clean.mp3?alt=media&token=ad2fa9df-5f98-4b0c-8071-a7e6710c6540",
     "id": "1"
   },
           {
     "name": "Empty Dirty Wild",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FEmpty%20Dirty%20Wild.mp3?alt=media&token=8b3e409d-f0ea-4f3c-9f00-f0176411021f",
     "id": "2"
   },
       {
     "name": "A Naked Man Disrupts the Morning Commute",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FA%20Naked%20Man%20Disrupts%20the%20Morning%20Commute.mp3?alt=media&token=1c8736fd-c458-4e66-a990-e7613d71fef6",
     "id": "3"
   },
         {
     "name": "Breathing Room",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FBreathing%20Room.mp3?alt=media&token=948eeaa7-4a60-4778-96f3-25286295b236",
     "id": "4"
   },
           {
     "name": "Words",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FWords.mp3?alt=media&token=df7486a8-5601-4d5c-acc8-0f9cc24f70ce",
     "id": "5"
   },
           {
     "name": "Restless",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FRestless.mp3?alt=media&token=416293b8-15c3-45af-a6ac-b761ba64d74c",
     "id": "6"
   },
           {
     "name": "Language Lessons",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FLanguage%20Lessons%20Master2.mp3?alt=media&token=5cf3221d-8d09-4f8a-9288-aa276aff6ab0",
     "id": "7"
   },
@@ -53,7 +53,7 @@
         {
     "name": "Flood",
     "writer": "Wired to Burn",
-    "img": "/assets/albumart.png",
+    "img": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2FmapWithlogo.png?alt=media&token=4ab085f5-7f39-4548-91b4-22cb11bb8435",
     "src": "https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/songs%2FFlood%20Master2.mp3?alt=media&token=c040c7d5-88ce-4693-9958-7522a3829d60",
     "id": "8"
   }

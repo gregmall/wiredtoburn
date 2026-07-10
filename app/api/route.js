@@ -6,8 +6,9 @@ const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
 const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
 
 const transporter = nodemailer.createTransport({
-    service:'outlook',
-    host: SMTP_SERVER_HOST,
+    
+    service:'gmail',
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false,
     auth: {
