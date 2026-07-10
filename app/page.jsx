@@ -48,49 +48,56 @@ export default function Home() {
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
         <div className="flex flex-col text-white mt-5">
-          <Element name="about" className="my-16 sm:my-24 md:my-40"> <h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE ABOUT SECTION</h1></Element>
+          <section className="mt-12 sm:mt-20">
+            <Element name="about" className="my-16 sm:my-24 md:my-40"> <h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE ABOUT SECTION</h1></Element>
+          </section>
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle6.jpg?alt=media&token=76acd7d2-e4df-4c0b-bd02-a2fb72978cba" className="rounded-full w-full h-auto object-cover" />
           </div>
-          <Element name="music" className="my-16 sm:my-24 md:my-40">
-            <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1>
-            <div className="w-full max-w-md mx-auto">
-              <AudioPlayer
-                 
-                playList={playList}
-                colorScheme="dark"
-                activeUI={{
-                  all: true,
-                  progress: "bar",
-                  }}
-                placement={{
-                  interface: {
-                    templateArea: {
-                      artwork: "row1-1",
-                      trackInfo: "row1-2",
-                      trackTimeCurrent: "row1-3",
-                      progress: "row1-4",
-                      trackTimeDuration: "row1-5",
-                      repeatType: "row2-1",
-                      playButton: "row2-2",
-                      volume: "row2-3",
-                      playList: "row2-4",
-                      playbackRate: "row2-5",
+          <section className="my-16 sm:my-24 md:my-40">
+            <Element name="music" >
+              <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1></Element>
+              <div className="w-full max-w-md mx-auto">
+                <AudioPlayer
+                  
+                  playList={playList}
+                  colorScheme="dark"
+                  activeUI={{
+                    all: true,
+                    progress: "bar",
+                    }}
+                  placement={{
+                    interface: {
+                      templateArea: {
+                        artwork: "row1-1",
+                        trackInfo: "row1-2",
+                        trackTimeCurrent: "row1-3",
+                        progress: "row1-4",
+                        trackTimeDuration: "row1-5",
+                        repeatType: "row2-1",
+                        playButton: "row2-2",
+                        volume: "row2-3",
+                        playList: "row2-4",
+                        playbackRate: "row2-5",
+                      },
                     },
-                  },
-                }}
-                rootContainerProps={{ className: "w-full" }}
-                />
-            </div>
-          </Element>
+                  }}
+                  rootContainerProps={{ className: "w-full" }}
+                  />
+              </div>
+            </section>
+          
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle8.jpg?alt=media&token=b724cc9a-f174-4404-9125-98737d4e55fb" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcirlce10.jpg?alt=media&token=0282e209-936a-4190-bfab-cbb409cecc6c" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
           </div>
-          <Element name="shows" className="mt-12 sm:mt-20"><h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE SHOWS SECTION!</h1></Element>
+          <section className="mt-12 sm:mt-20">
+            <Element name="shows" ><h1 className='text-2xl sm:text-3xl font-bold'>UPCOMING SHOWS</h1></Element>
+            
+          </section>
         </div>
       </main>
       

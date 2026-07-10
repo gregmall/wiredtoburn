@@ -14,7 +14,6 @@ import {
 } from "@material-tailwind/react";
 
 const PLACEHOLDER_QUESTION = 'Any questions, comments, or inquiries? Please include your email so that we can respond ASAP! ';
-
 const labelProps = { className: "before:content-none after:content-none" };
 
 const Contact = () => {
@@ -30,7 +29,6 @@ const Contact = () => {
 
         try {
             await sendEmail({
-                to: 'wiredtoburn@gmail.com',
                 subject: `New Form Submission from ${name || 'a user'} `,
                 text: `You received a form submission from ${name || 'a user'}!\nEmail: ${email || 'No email provided'}\nQuestion/Comment: ${content || 'No content provided'}`
             });
