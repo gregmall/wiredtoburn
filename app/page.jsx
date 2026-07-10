@@ -28,7 +28,7 @@ export default function Home() {
             src="/assets/newWired.gif"
             className="w-[70vw] h-auto mt-2 sm:mt-5 max-h-[100px] sm:max-h-[150px] max-w-[825px]"
             />
-          <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 my-2 text-white">
+          <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-4 text-white">
             <a href="#about" className="text-white hover:text-gray-400">About</a>
             <a href="#music" className="text-white hover:text-gray-400">Music</a>
             <a href="#shows" className="text-white hover:text-gray-400">Shows</a>
