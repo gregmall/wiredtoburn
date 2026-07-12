@@ -24,7 +24,7 @@ export default function Home() {
             src="/assets/newWired.gif"
             className="w-[70vw] h-auto mt-2 sm:mt-5 max-h-[100px] sm:max-h-[150px] max-w-[825px]"
             />
-          <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-6 text-white">
+          <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-6 text-white bg-black">
             <Link to="about" smooth={true} duration={700}className="text-white hover:text-gray-400">About</Link>
             <Link to="music" smooth={true} duration={700}className="text-white hover:text-gray-400">Music</Link>
             <Link to="shows" smooth={true} duration={700}className="text-white hover:text-gray-400">Shows</Link>
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </header>
 
-      <aside className="text-white p-4">
+      <aside className="text-white p-4 bg-black bg-opacity-90">
         <h1 className="text-2xl sm:text-3xl font-bold mb-4 mt-6">We are a band</h1>
         <p className="text-base sm:text-lg mb-10 sm:mb-20">
           We play music. We recorded some of it. We will post it here.
@@ -48,7 +48,7 @@ export default function Home() {
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
         <div className="flex flex-col text-white mt-5">
-          <section className="mt-12 sm:mt-20">
+          <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
             <Element name="about" className="my-16 sm:my-24 md:my-40"> <h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE ABOUT SECTION</h1></Element>
           </section>
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
@@ -56,7 +56,7 @@ export default function Home() {
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle6.jpg?alt=media&token=76acd7d2-e4df-4c0b-bd02-a2fb72978cba" className="rounded-full w-full h-auto object-cover" />
           </div>
-          <section className="my-16 sm:my-24 md:my-40">
+          <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
             <Element name="music" >
               <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1></Element>
               <div className="w-full max-w-md mx-auto">
@@ -94,9 +94,33 @@ export default function Home() {
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcirlce10.jpg?alt=media&token=0282e209-936a-4190-bfab-cbb409cecc6c" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
           </div>
-          <section className="mt-12 sm:mt-20">
+          <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
             <Element name="shows" ><h1 className='text-2xl sm:text-3xl font-bold'>UPCOMING SHOWS</h1></Element>
-            
+             <div className="max-w-4xl mx-auto px-4 py-8 bg-black text-white">
+     
+      <div className="divide-y divide-zinc-800">
+      
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between py-4 gap-4 hover:bg-zinc-900 px-2 transition">
+            {/* Date Block */}
+            <div className="text-xl font-black tracking-tight min-w-[80px]">
+             July 16th, 2026
+            </div>
+            {/* Venue & Location */}
+            <div className="flex-1">
+              <h3 className="text-lg font-bold">The Snug</h3>
+              <p className="text-zinc-400 text-sm">6806 NE Broadway, Portland, Oregon 97213</p>
+            </div>
+            {/* Action Button */}
+            <div>
+              with <a href="https://www.instagram.com/noahthegh0st/" target="_blank" rel="noopener noreferrer"><h1>noahthegh0st</h1></a> 
+              <span><a href = "https://www.instagram.com/thehelpers_official/" target='_blank'>THE HELPERS</a></span>
+              
+            </div>
+          </div>
+       
+      </div>
+    </div>
+
           </section>
         </div>
       </main>
