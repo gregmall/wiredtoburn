@@ -158,7 +158,7 @@ export default function Home() {
                 We mean that burning is a feature. It makes space for new growth. The renewal part isn’t pretty, but it sure is important. Hopefully what comes next is a bit better and there is more space for everyone. Then one day there isn’t, there’s a spark, and the cycle starts again. 
                 </p>
                 <p className="text-base sm:text-lg mb-2 sm:mb-4">
-                  We live in the Pacific Northwest, a place literally wired to burn. There are pine and fir trees here that can only reproduce in fire. I you choke a system it can’t grow and change and thrive. That system’s gonna die. The remnants will eventually burn, and it will be catastrophic. Then something new and different will get a shot to reshape the world. 
+                  We live in the Pacific Northwest, a place literally wired to burn. There are pine and fir trees here that can only reproduce in fire. If you choke a system it can’t grow and change and thrive. That system’s gonna die. The remnants will eventually burn, and it will be catastrophic. Then something new and different will get a shot to reshape the world. 
                   We’re not talking about forests. 
                 </p>
                 <p className="text-base sm:text-lg mb-2 sm:mb-4">
