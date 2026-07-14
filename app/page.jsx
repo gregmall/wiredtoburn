@@ -38,42 +38,29 @@ export default function Home() {
       </header>
 
       <aside className="text-white p-4 bg-black bg-opacity-90">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 mt-6">We are a band</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 mt-6">Alive not thriving</h1>
         <p className="text-base sm:text-lg mb-10 sm:mb-20">
-          We play music. We recorded some of it. We will post it here.
+          New album out now!
         </p>
       </aside>
       <main className="p-4 mt-5">
+        <Element name="music" >
         <div className="grid grid-cols-3 gap-2 sm:gap-4">
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle2.jpg?alt=media&token=1240800d-a978-4c66-91ac-7ffd0a06b574" className="rounded-full w-full h-auto object-cover" />
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle4.jpg?alt=media&token=af634f5d-0e27-4705-8d9e-4f9ff355acba" className="rounded-full w-full h-auto object-cover" />
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
+        </Element>
         <div className="flex flex-col text-white mt-5">
-         <Element name="about" className="my-1 sm:my-2 md:my-4">  <section className="mt-2 sm:mt-4 text-white p-4 bg-black bg-opacity-60 width-1/2">
-            <h1 className='text-2xl sm:text-3xl font-bold'>About</h1>
-            <p className="text-base sm:text-lg mb-2 sm:mb-4">
-              After practice the other day, during a discussion about what we should call our first album, we talked about what our band name means, and what we mean by using it. 
-            </p>
-            <p className="text-base sm:text-lg mb-2 sm:mb-4">
-            We mean that burning is a feature. It makes space for new growth. The renewal part isn’t pretty, but it sure is important. Hopefully what comes next is a bit better and there is more space for everyone. Then one day there isn’t, there’s a spark, and the cycle starts again. 
-            </p>
-            <p className="text-base sm:text-lg mb-2 sm:mb-4">
-              We live in the Pacific Northwest, a place literally wired to burn. There are pine and fir trees here that can only reproduce in fire. I you choke a system it can’t grow and change and thrive. That system’s gonna die. The remnants will eventually burn, and it will be catastrophic. Then something new and different will get a shot to reshape the world. 
-              We’re not talking about forests. 
-            </p>
-            <p className="text-base sm:text-lg mb-2 sm:mb-4">
-              Jeff plays drums and sings a little, Greg plays bass and sings a little, Grant plays guitar and won’t stop singing. We are Wired to Burn from Portland, Or.  
-            </p>
-          </section></Element>
-          <div className="grid grid-cols-3 gap-2 sm:gap-4">
-            <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
-            <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
-            <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle6.jpg?alt=media&token=76acd7d2-e4df-4c0b-bd02-a2fb72978cba" className="rounded-full w-full h-auto object-cover" />
-          </div>
-          <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
-            <Element name="music" >
-              <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1></Element>
+           <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
+            
+              <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1>
+              <p className="text-base sm:text-sm">
+                Recorded 1/26 at <a href="https://www.instagram.com/lo_rent_sound/" target="_blank" rel="noopener noreferrer">Lo Rent Sound</a> 
+             </p>
+             <p className="text-base sm:text-sm mb-4">
+                Mixed and Mastered by <a href="https://www.instagram.com/jeremyhansen4730/" target="_blank" rel="noopener noreferrer">Jeremy Hansen</a> 
+             </p>
               <div className="w-full max-w-md mx-auto">
                 <AudioPlayer
                   
@@ -118,41 +105,72 @@ export default function Home() {
                   />
               </div>
             </section>
-          
-          <div className="grid grid-cols-3 gap-2 sm:gap-4">
-            <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle8.jpg?alt=media&token=b724cc9a-f174-4404-9125-98737d4e55fb" className="rounded-full w-full h-auto object-cover" />
-            <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcirlce10.jpg?alt=media&token=0282e209-936a-4190-bfab-cbb409cecc6c" className="rounded-full w-full h-auto object-cover" />
-            <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
-          </div>
-          <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
-            <Element name="shows" ><h1 className='text-2xl sm:text-3xl font-bold'>UPCOMING SHOWS</h1></Element>
-             <div className="max-w-4xl mx-auto px-4 py-8 bg-black text-white">
+             <Element name="shows" >
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
+                  <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
+                  <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle6.jpg?alt=media&token=76acd7d2-e4df-4c0b-bd02-a2fb72978cba" className="rounded-full w-full h-auto object-cover" />
+                </div>
+              </Element>
+           <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
+           <h1 className='text-2xl sm:text-3xl font-bold'>UPCOMING SHOWS</h1>
+             <div className="max-w-4xl mx-auto px-4 py-8  text-white">
      
-      <div className="divide-y divide-zinc-800">
-      
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between py-4 gap-4 hover:bg-zinc-900 px-2 transition">
-            {/* Date Block */}
-            <div className="text-xl font-black tracking-tight min-w-[80px]">
-             July 16th, 2026
-            </div>
-            {/* Venue & Location */}
-            <div className="flex-1">
-              <h3 className="text-lg font-bold">The Snug</h3>
-              <p className="text-zinc-400 text-sm">6806 NE Broadway, Portland, Oregon 97213</p>
-              <p><a href={googleMapsUrl} target='_blank' className="text-zinc-400 text-sm">View on Google Maps</a> </p>
-            </div>
-            {/* Action Button */}
-            <div>
-              with <a href="https://www.instagram.com/noahthegh0st/" target="_blank" rel="noopener noreferrer"><h1>noahthegh0st</h1></a> 
-              <span><a href = "https://www.instagram.com/thehelpers_official/" target='_blank'>THE HELPERS</a></span>
-              
-            </div>
-          </div>
-       
-      </div>
-    </div>
+                <div className="divide-y divide-zinc-800">
+                
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between py-4 gap-4 hover:bg-zinc-900 px-2 transition">
+                      {/* Date Block */}
+                      <div className="text-xl font-black tracking-tight min-w-[80px]">
+                      July 16th, 2026
+                      </div>
+                      {/* Venue & Location */}
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold">The Snug</h3>
+                        <p className="text-zinc-400 text-sm">6806 NE Broadway, Portland, Oregon 97213</p>
+                        <p><a href={googleMapsUrl} target='_blank' className="text-zinc-400 text-sm">View on Google Maps</a> </p>
+                      </div>
+                      {/* Action Button */}
+                      <div>
+                        with <a href="https://www.instagram.com/noahthegh0st/" target="_blank" rel="noopener noreferrer"><h1>noahthegh0st</h1></a> 
+                        <span><a href = "https://www.instagram.com/thehelpers_official/" target='_blank'>THE HELPERS</a></span>
+                        
+                      </div>
+                    </div>
+                
+                </div>
+              </div>
 
           </section>
+           <Element name="about" className="my-1 sm:my-2 md:my-4"> 
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+              <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle8.jpg?alt=media&token=b724cc9a-f174-4404-9125-98737d4e55fb" className="rounded-full w-full h-auto object-cover" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcirlce10.jpg?alt=media&token=0282e209-936a-4190-bfab-cbb409cecc6c" className="rounded-full w-full h-auto object-cover" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
+            </div>
+          </Element>
+          <div style ={{ width: "70vw", textAlign: "center", margin: "0 auto"}}>
+            <section className="mt-2 sm:mt-4 text-white p-4 bg-black bg-opacity-60 width-2/3">
+                <h1 className='text-2xl sm:text-3xl font-bold'>About</h1>
+                <p className="text-base sm:text-lg mb-2 sm:mb-4">
+                  After practice the other day, during a discussion about what we should call our first album, we talked about what our band name means, and what we mean by using it. 
+                </p>
+                <p className="text-base sm:text-lg mb-2 sm:mb-4">
+                We mean that burning is a feature. It makes space for new growth. The renewal part isn’t pretty, but it sure is important. Hopefully what comes next is a bit better and there is more space for everyone. Then one day there isn’t, there’s a spark, and the cycle starts again. 
+                </p>
+                <p className="text-base sm:text-lg mb-2 sm:mb-4">
+                  We live in the Pacific Northwest, a place literally wired to burn. There are pine and fir trees here that can only reproduce in fire. I you choke a system it can’t grow and change and thrive. That system’s gonna die. The remnants will eventually burn, and it will be catastrophic. Then something new and different will get a shot to reshape the world. 
+                  We’re not talking about forests. 
+                </p>
+                <p className="text-base sm:text-lg mb-2 sm:mb-4">
+                  Jeff plays drums and sings a little, Greg plays bass and sings a little, Grant plays guitar and won’t stop singing. We are Wired to Burn from Portland, Or.  
+                </p>
+              </section>
+            </div>
+         
+         
+          
+          
+         
         </div>
       </main>
       
