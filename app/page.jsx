@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRef, useState } from 'react';
 import playListData from '../playList.json';
-import  AudioPlayer,{ ActiveUI }from "react-modern-audio-player";
+import  AudioPlayer,{ ActiveUI, ProgressUI }from "react-modern-audio-player";
 import "react-modern-audio-player/dist/index.css";
 import { Link, Element } from "react-scroll";
 import { Button } from "@material-tailwind/react";
@@ -12,7 +12,9 @@ const { playList } = playListData;
 
 export default function Home() {
 
-  const naveRef = useRef(null);
+  const address = "6806 NE Broadway, Portland, Oregon 97213";
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+
 
 
   return (
@@ -41,16 +43,29 @@ export default function Home() {
           We play music. We recorded some of it. We will post it here.
         </p>
       </aside>
-      <main className="p-4">
+      <main className="p-4 mt-5">
         <div className="grid grid-cols-3 gap-2 sm:gap-4">
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle2.jpg?alt=media&token=1240800d-a978-4c66-91ac-7ffd0a06b574" className="rounded-full w-full h-auto object-cover" />
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle4.jpg?alt=media&token=af634f5d-0e27-4705-8d9e-4f9ff355acba" className="rounded-full w-full h-auto object-cover" />
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
         <div className="flex flex-col text-white mt-5">
-          <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
-            <Element name="about" className="my-16 sm:my-24 md:my-40"> <h1 className='text-2xl sm:text-3xl font-bold'>THIS IS THE ABOUT SECTION</h1></Element>
-          </section>
+         <Element name="about" className="my-1 sm:my-2 md:my-4">  <section className="mt-2 sm:mt-4 text-white p-4 bg-black bg-opacity-60 width-1/2">
+            <h1 className='text-2xl sm:text-3xl font-bold'>About</h1>
+            <p className="text-base sm:text-lg mb-2 sm:mb-4">
+              After practice the other day, during a discussion about what we should call our first album, we talked about what our band name means, and what we mean by using it. 
+            </p>
+            <p className="text-base sm:text-lg mb-2 sm:mb-4">
+            We mean that burning is a feature. It makes space for new growth. The renewal part isn’t pretty, but it sure is important. Hopefully what comes next is a bit better and there is more space for everyone. Then one day there isn’t, there’s a spark, and the cycle starts again. 
+            </p>
+            <p className="text-base sm:text-lg mb-2 sm:mb-4">
+              We live in the Pacific Northwest, a place literally wired to burn. There are pine and fir trees here that can only reproduce in fire. I you choke a system it can’t grow and change and thrive. That system’s gonna die. The remnants will eventually burn, and it will be catastrophic. Then something new and different will get a shot to reshape the world. 
+              We’re not talking about forests. 
+            </p>
+            <p className="text-base sm:text-lg mb-2 sm:mb-4">
+              Jeff plays drums and sings a little, Greg plays bass and sings a little, Grant plays guitar and won’t stop singing. We are Wired to Burn from Portland, Or.  
+            </p>
+          </section></Element>
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
             <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
@@ -66,7 +81,20 @@ export default function Home() {
                   colorScheme="dark"
                   activeUI={{
                     all: true,
-                    progress: "bar",
+               
+                    playButton: "icon",
+                    playList: "icon",
+                    previousButton: "icon",
+                    nextButton: "icon",
+                    volume: "icon",
+                    volumeSlider: "bar",
+                    repeatType: "icon",
+                    trackTime: "text",
+                    trackInfo: "text",
+                    artwork: "cover",
+                    progress: "bar"
+
+                   
                     }}
                   placement={{
                     interface: {
@@ -78,6 +106,8 @@ export default function Home() {
                         trackTimeDuration: "row1-5",
                         repeatType: "row2-1",
                         playButton: "row2-2",
+                        playNextButton: "row2-3",
+                        playPreviousButton: "row2-4",
                         volume: "row2-3",
                         playList: "row2-4",
                         playbackRate: "row2-5",
@@ -109,6 +139,7 @@ export default function Home() {
             <div className="flex-1">
               <h3 className="text-lg font-bold">The Snug</h3>
               <p className="text-zinc-400 text-sm">6806 NE Broadway, Portland, Oregon 97213</p>
+              <p><a href={googleMapsUrl} target='_blank' className="text-zinc-400 text-sm">View on Google Maps</a> </p>
             </div>
             {/* Action Button */}
             <div>
