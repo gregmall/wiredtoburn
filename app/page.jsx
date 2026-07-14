@@ -27,9 +27,9 @@ export default function Home() {
             className="w-[70vw] h-auto mt-2 sm:mt-5 max-h-[100px] sm:max-h-[150px] max-w-[825px]"
             />
           <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-6 text-white bg-black">
-            <Link to="about" smooth={true} duration={700}className="text-white hover:text-gray-400">About</Link>
             <Link to="music" smooth={true} duration={700}className="text-white hover:text-gray-400">Music</Link>
             <Link to="shows" smooth={true} duration={700}className="text-white hover:text-gray-400">Shows</Link>
+            <Link to="about" smooth={true} duration={700}className="text-white hover:text-gray-400">About</Link>
             <a href="/contact" className="text-white hover:text-gray-400">Contact</a>
             <a href="https://www.facebook.com/wiredtoburn" target="_blank" rel="noopener noreferrer" className="text-white"><img src="/assets/facebook.png" /></a>
             <a href="https://www.instagram.com/wired_to_burn" target="_blank" rel="noopener noreferrer" className="text-white"><img src="/assets/instagram.png" /></a>
