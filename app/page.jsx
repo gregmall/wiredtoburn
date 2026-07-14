@@ -190,13 +190,13 @@ const handleSubmit = async(e) => {
                 Join our mailing list for updates on shows, music, and more!
               </Typography>
               <Input
-     
+                 required
                  placeholder='Email here' 
                  type='email'
                  variant="outlined"
                  className="w-1/2 sm:w-1/3 text-white" 
                  onChange={(e) => setEmail(e.target.value)}/>
-              <Button className="ml-2 sm:ml-4 mt-2" type="submit">Subscribe</Button>
+              <Button className="ml-2 sm:ml-4 mt-2" type="submit" ripple={true}>Subscribe</Button>
               </form>
             </div>
                <div className="flex justify-center mt-8 text-xs"><em>Copyright &copy; 2026 Wired to Burn, All rights reserved.</em></div>
