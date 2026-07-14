@@ -37,7 +37,7 @@ const Contact = () => {
         }
 
         try {
-            await db.collection('formSubmission').add({ name, content, email, date: Date.now() });
+            await db.collection('formSubmission').add({ name, content, email, date: new Date().toLocaleDateString() });
             Notiflix.Notify.success('Thanks for reaching out! We will get back to you as soon as possible.');
             router.push('/');
         } catch (error) {

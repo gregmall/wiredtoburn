@@ -6,7 +6,9 @@ import playListData from '../playList.json';
 import  AudioPlayer,{ ActiveUI, ProgressUI }from "react-modern-audio-player";
 import "react-modern-audio-player/dist/index.css";
 import { Link, Element } from "react-scroll";
-import { Button } from "@material-tailwind/react";
+import { Button, Input, Typography } from "@material-tailwind/react";
+import { db } from '../src/config/Config';
+import Notiflix  from 'notiflix';
 
 const { playList } = playListData;
 
@@ -15,6 +17,22 @@ export default function Home() {
   const address = "6806 NE Broadway, Portland, Oregon 97213";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
+const [email, setEmail] = useState('');
+const handleSubmit = async(e) => {
+  e.preventDefault();
+  // Handle form submission logic here
+  // For example, you can send the email to your server or an email service
+  try{
+  await db.collection('mailingList').add({ email, date: new Date().toLocaleDateString() });
+  Notiflix.Notify.success('Thanks for subscribing! You will receive updates on shows, music, and more.'); 
+  setEmail(''); // Clear the input field after submission  
+  }
+  catch (error) {
+    console.error(error.message);
+    alert(`Error submitting form: ${error.message}`);
+  } 
+
+};
 
 
   return (
@@ -38,7 +56,7 @@ export default function Home() {
       </header>
 
       <aside className="text-white p-4 bg-black bg-opacity-90">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 mt-6">Alive not thriving</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 mt-6">Alive Not Thriving</h1>
         <p className="text-base sm:text-lg mb-10 sm:mb-20">
           New album out now!
         </p>
@@ -166,6 +184,23 @@ export default function Home() {
                 </p>
               </section>
             </div>
+            <div className="flex flex-col justify-center mt-4 sm:mt-8 mb-8">
+              <form onSubmit={handleSubmit}>
+              <Typography variant="h6" color="white" className="mb-2 sm:mb-4">
+                Join our mailing list for updates on shows, music, and more!
+              </Typography>
+              <Input
+     
+                 placeholder='Email here' 
+                 type='email'
+                 variant="outlined"
+                 className="w-1/2 sm:w-1/3 text-white" 
+                 onChange={(e) => setEmail(e.target.value)}/>
+              <Button className="ml-2 sm:ml-4 mt-2" type="submit">Subscribe</Button>
+              </form>
+            </div>
+               <div className="flex justify-center mt-8 text-xs"><em>Copyright &copy; 2026 Wired to Burn, All rights reserved.</em></div>
+   
          
          
           
