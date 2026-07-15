@@ -204,7 +204,7 @@ const handleSubmit = async(e) => {
                 </p>
               </section>
             </div>
-            <div className="flex flex-col justify-center mt-4 sm:mt-8 mb-8">
+            <div className="flex flex-col justify-center mt-4 sm:mt-8 mb-8 bg-black bg-opacity-60">
               <form onSubmit={handleSubmit}>
               <Typography variant="h6" color="white" className="mb-2 sm:mb-4">
                 Join our mailing list for updates on shows, music, and more!
