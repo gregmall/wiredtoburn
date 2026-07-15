@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { db } from '../../src/config/Config';
 import { useRouter } from 'next/navigation';
-import { sendEmail } from '../api/route';
+import { sendEmail } from '../api/email/route';
 import Notiflix from 'notiflix';
 import {
     Card,
@@ -12,6 +12,7 @@ import {
     Textarea,
     Spinner
 } from "@material-tailwind/react";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const PLACEHOLDER_QUESTION = 'Any questions, comments, or inquiries? Please include your email so that we can respond ASAP! ';
 const labelProps = { className: "before:content-none after:content-none" };
@@ -22,10 +23,29 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [content, setContent] = useState('');
     const [loading, setLoading] = useState(false);
+    const [captchaValue, setCaptchaValue] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        try {
+            const captchaRes = await fetch('/api/verify-captcha', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: captchaValue }),
+            });
+            const captchaData = await captchaRes.json();
+            if (!captchaData.success) {
+                alert('Captcha verification failed. Please try again.');
+                setLoading(false);
+                return;
+            }
+        } catch (error) {
+            console.error('Captcha verification error:', error);
+            alert('Captcha verification failed. Please try again.');
+            setLoading(false);
+            return;
+        }
 
         try {
             await sendEmail({
@@ -113,6 +133,11 @@ const Contact = () => {
                                 <a href="mailto:wiredtoburn@gmail.com?subject=I have an inquiry about Wired to Burn..." className="text-blue-500 font-bold">Click Here</a>
                             </Typography>
                         </form>
+                        <ReCAPTCHA
+                        className='flex justify-center'
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                        onChange={(value) => setCaptchaValue(value)}
+                    />
                     </Card>
                     <Button className="mt-6" color='white' fullWidth onClick={() => router.push('/')}>
                         BACK TO HOMEPAGE

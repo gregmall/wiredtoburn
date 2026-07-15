@@ -8,31 +8,51 @@ import "react-modern-audio-player/dist/index.css";
 import { Link, Element } from "react-scroll";
 import { Button, Input, Typography } from "@material-tailwind/react";
 import { db } from '../src/config/Config';
+import ReCAPTCHA from 'react-google-recaptcha';
 import Notiflix  from 'notiflix';
 
 const { playList } = playListData;
 
 export default function Home() {
 
+  const [captchaValue, setCaptchaValue] = useState(null);
   const address = "6806 NE Broadway, Portland, Oregon 97213";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
 const [email, setEmail] = useState('');
 const handleSubmit = async(e) => {
   e.preventDefault();
-  // Handle form submission logic here
-  // For example, you can send the email to your server or an email service
-  try{
-  await db.collection('mailingList').add({ email, date: new Date().toLocaleDateString() });
-  Notiflix.Notify.success('Thanks for subscribing! You will receive updates on shows, music, and more.'); 
-  setEmail(''); // Clear the input field after submission  
-  }
-  catch (error) {
-    console.error(error.message);
-    alert(`Error submitting form: ${error.message}`);
-  } 
+  
+      try {
+            const captchaRes = await fetch('/api/verify-captcha', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: captchaValue }),
+            });
+            const captchaData = await captchaRes.json();
+            if (!captchaData.success) {
+                alert('Captcha verification failed. Please try again.');
+                setLoading(false);
+                return;
+            }
+    } catch (error) {
+            console.error('Captcha verification error:', error);
+            alert('Captcha verification failed. Please try again.');
+            setLoading(false);
+            return;
+          }
 
-};
+      try {
+          await db.collection('mailingList').add({ email, date: new Date().toLocaleDateString() });
+          Notiflix.Notify.success('Thanks for subscribing! You will receive updates on shows, music, and more.'); 
+          setEmail(''); // Clear the input field after submission  
+          }
+      catch (error) {
+            console.error(error.message);
+            alert(`Error submitting form: ${error.message}`);
+          } 
+
+        };
 
 
   return (
@@ -166,7 +186,7 @@ const handleSubmit = async(e) => {
               <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
             </div>
           </Element>
-          <div style ={{ width: "70vw", textAlign: "center", margin: "0 auto"}}>
+          <div style ={{ width: "90vw", textAlign: "center", margin: "0 auto"}}>
             <section className="mt-2 sm:mt-4 text-white p-4 bg-black bg-opacity-60 width-2/3">
                 <h1 className='text-2xl sm:text-3xl font-bold'>About</h1>
                 <p className="text-base sm:text-lg mb-2 sm:mb-4">
@@ -194,9 +214,14 @@ const handleSubmit = async(e) => {
                  placeholder='Email here' 
                  type='email'
                  variant="outlined"
-                 className="w-1/2 sm:w-1/3 text-white" 
+                 className=" text-white max-w-72" 
                  onChange={(e) => setEmail(e.target.value)}/>
               <Button className="ml-2 sm:ml-4 mt-2" type="submit" ripple={true}>Subscribe</Button>
+              <ReCAPTCHA
+                 className='flex justify-center'
+                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                 onChange={(value) => setCaptchaValue(value)}
+              />
               </form>
             </div>
                <div className="flex justify-center mt-8 text-xs"><em>Copyright &copy; 2026 Wired to Burn, All rights reserved.</em></div>
