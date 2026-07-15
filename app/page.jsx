@@ -216,7 +216,7 @@ const handleSubmit = async(e) => {
                  variant="outlined"
                  className=" text-white max-w-72" 
                  onChange={(e) => setEmail(e.target.value)}/>
-              <Button className="ml-2 sm:ml-4 mt-2" type="submit" ripple={true}>Subscribe</Button>
+              <Button className="ml-2 sm:ml-4 my-2" type="submit" ripple={true} disabled={!captchaValue}>Subscribe</Button>
               <ReCAPTCHA
                  className='flex justify-center'
                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
