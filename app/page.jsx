@@ -8,6 +8,7 @@ import "react-modern-audio-player/dist/index.css";
 import { Link, Element } from "react-scroll";
 import { Button, Input, Typography } from "@material-tailwind/react";
 import { db } from '../src/config/Config';
+import { useRouter } from 'next/navigation';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Notiflix  from 'notiflix';
 
@@ -16,12 +17,14 @@ const { playList } = playListData;
 export default function Home() {
 
   const [captchaValue, setCaptchaValue] = useState(null);
+  const [email, setEmail] = useState('');
   const address = "6806 NE Broadway, Portland, Oregon 97213";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  const router = useRouter();
+ 
 
-const [email, setEmail] = useState('');
-const handleSubmit = async(e) => {
-  e.preventDefault();
+  const handleSubmit = async(e) => {
+    e.preventDefault();
   
       try {
             const captchaRes = await fetch('/api/verify-captcha', {
@@ -45,7 +48,8 @@ const handleSubmit = async(e) => {
       try {
           await db.collection('mailingList').add({ email, date: new Date().toLocaleDateString() });
           Notiflix.Notify.success('Thanks for subscribing! You will receive updates on shows, music, and more.'); 
-          setEmail(''); // Clear the input field after submission  
+          setEmail(''); 
+          router.push('/');  
           }
       catch (error) {
             console.error(error.message);
