@@ -211,10 +211,11 @@ const handleSubmit = async(e) => {
               </Typography>
               <Input
                  required
-                 placeholder='Email here' 
+                 placeholder='Email here'
                  type='email'
                  variant="outlined"
-                 className=" text-white max-w-72" 
+                 className=" text-white max-w-72"
+                 value={email}
                  onChange={(e) => setEmail(e.target.value)}/>
               <Button className="ml-2 sm:ml-4 my-2" type="submit" ripple={true} disabled={!captchaValue}>Subscribe</Button>
               <ReCAPTCHA
