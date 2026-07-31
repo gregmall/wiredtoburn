@@ -5,7 +5,7 @@ import { useRef, useState } from 'react';
 import playListData from '../playList.json';
 import  AudioPlayer,{ ActiveUI, ProgressUI }from "react-modern-audio-player";
 import "react-modern-audio-player/dist/index.css";
-import { Link, Element } from "react-scroll";
+import { Link as ScrollLink, Element } from "react-scroll";
 import { Button, Input, Typography } from "@material-tailwind/react";
 import { db } from '../src/config/Config';
 import { useRouter } from 'next/navigation';
@@ -69,9 +69,9 @@ export default function Home() {
             className="w-[70vw] h-auto mt-2 sm:mt-5 max-h-[100px] sm:max-h-[150px] max-w-[825px]"
             />
           <nav className="flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-1 mt-2 mb-6 text-white bg-black">
-            <Link to="music" smooth={true} duration={700}className="text-white hover:text-gray-400">Music</Link>
-            <Link to="shows" smooth={true} duration={700}className="text-white hover:text-gray-400">Shows</Link>
-            <Link to="about" smooth={true} duration={700}className="text-white hover:text-gray-400">About</Link>
+            <ScrollLink to="music" smooth duration={1000} offset={-100} className="text-white hover:text-gray-400">Music</ScrollLink>
+            <ScrollLink to="shows" smooth duration={1000} offset={-100} className="text-white hover:text-gray-400">Shows</ScrollLink>
+            <ScrollLink to="about" smooth duration={1000} offset={-140} className="text-white hover:text-gray-400">About</ScrollLink>
             <a href="/contact" className="text-white hover:text-gray-400">Contact</a>
             <a href="https://www.facebook.com/wiredtoburn" target="_blank" rel="noopener noreferrer" className="text-white"><img src="/assets/facebook.png" /></a>
             <a href="https://www.instagram.com/wired_to_burn" target="_blank" rel="noopener noreferrer" className="text-white"><img src="/assets/instagram.png" /></a>
@@ -86,14 +86,15 @@ export default function Home() {
         </p>
       </aside>
       <main className="p-4 mt-5">
-        <Element name="music" >
+        
         <div className="grid grid-cols-3 gap-2 sm:gap-4">
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle2.jpg?alt=media&token=1240800d-a978-4c66-91ac-7ffd0a06b574" className="rounded-full w-full h-auto object-cover" />
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle4.jpg?alt=media&token=af634f5d-0e27-4705-8d9e-4f9ff355acba" className="rounded-full w-full h-auto object-cover" />
           <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle3.jpg?alt=media&token=09644b5e-ee60-4c89-9d8b-edbf57959a52" className="rounded-full w-full h-auto object-cover" />
         </div>
-        </Element>
+       
         <div className="flex flex-col text-white mt-5">
+          <Element name="music" >
            <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
             
               <h1 className='text-2xl sm:text-3xl font-bold mb-4'>Music</h1>
@@ -147,13 +148,15 @@ export default function Home() {
                   />
               </div>
             </section>
-             <Element name="shows" >
+            </Element>
+             
               <div className="grid grid-cols-3 gap-2 sm:gap-4">
                   <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle1.jpg?alt=media&token=14686fb1-2617-427d-b5ba-dbfbba3a6963" className="rounded-full w-full h-auto object-cover" />
                   <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle7.jpg?alt=media&token=7aba0e22-5ef0-4b14-91f5-2b23768137d0" className="rounded-full w-full h-auto object-cover" />
                   <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle6.jpg?alt=media&token=76acd7d2-e4df-4c0b-bd02-a2fb72978cba" className="rounded-full w-full h-auto object-cover" />
                 </div>
-              </Element>
+              
+              <Element name="shows" >
            <section className="mt-12 sm:mt-20 text-white p-4 bg-black bg-opacity-60">
            <h1 className='text-2xl sm:text-3xl font-bold'>UPCOMING SHOWS</h1>
              <div className="max-w-4xl mx-auto px-4 py-8  text-white">
@@ -183,14 +186,16 @@ export default function Home() {
               </div>
 
           </section>
-           <Element name="about" className="my-1 sm:my-2 md:my-4"> 
+          </Element>
+           
             <div className="grid grid-cols-3 gap-2 sm:gap-4">
               <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle8.jpg?alt=media&token=b724cc9a-f174-4404-9125-98737d4e55fb" className="rounded-full w-full h-auto object-cover" />
               <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcirlce10.jpg?alt=media&token=0282e209-936a-4190-bfab-cbb409cecc6c" className="rounded-full w-full h-auto object-cover" />
               <img src="https://firebasestorage.googleapis.com/v0/b/wired-to-burn.firebasestorage.app/o/images%2Fcircle9.jpg?alt=media&token=1fe92e08-987b-4dc2-91b6-20a46aff65db" className="rounded-full w-full h-auto object-cover" />
             </div>
-          </Element>
+          <Element name="about" className="my-1 sm:my-2 md:my-4"> 
           <div style ={{ width: "90vw", textAlign: "center", margin: "0 auto"}}>
+           
             <section className="mt-2 sm:mt-4 text-white p-4 bg-black bg-opacity-60 width-2/3">
                 <h1 className='text-2xl sm:text-3xl font-bold'>About</h1>
                 <p className="text-base sm:text-lg mb-2 sm:mb-4">
@@ -207,7 +212,9 @@ export default function Home() {
                   Jeff plays drums and sings a little, Greg plays bass and sings a little, Grant plays guitar and won’t stop singing. We are Wired to Burn from Portland, Or.  
                 </p>
               </section>
+              
             </div>
+             </Element>
             <div className="flex flex-col justify-center mt-4 sm:mt-8 mb-8 bg-black bg-opacity-60">
               <form onSubmit={handleSubmit}>
               <Typography variant="h6" color="white" className="mb-2 sm:mb-4">
